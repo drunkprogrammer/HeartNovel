@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/vue.js"></script>
+		<script src="js/index.js"></script>
+		<link rel="stylesheet" href="css/index.css" />
+		<title>初心在线小说</title>
+	</head>
+	<body>
+		<div id="novel"> 
+			<div id="novel-1">
+				<h1>初心在线小说</h1>
+				<h2>一个没有广告的小说网站</h2>
+			</div>
+			<div id="novel-2">
+				<ul class="header" id="header">
+					<li id="first">
+						<a href="#">最新小说</a>
+					</li>
+					<li>
+						<a href="#">小说排名</a>
+					</li>
+					<li>
+						<a href="#">我的书架</a>
+					</li>
+					<li>
+						<a href="#">资源分享</a>
+					</li>
+					<li>
+						<a href="#">写写小说</a>
+					</li>
+					<li>
+						<a href="login.html">登录/注册</a>
+					</li>
+				</ul>
+				<div id="novel-3">
+					<form action="#" method="post">
+						<input name="bookname" id="search" placeholder="书名">
+						<!--这个地方可以输入文字的时候提示用户有什么书-->
+						<input type="submit" value="搜索" />
+					</form>
+				</div>
+			</div>
+			<div id="content">
+				<div class="recentlynovel">
+					<img src="img/recently1.jpg">
+					<div class="bookintroduction">
+						<p>　有一条河，它很浅很浅，也许你伸手便可以摸到水底的鹅软石， 在河的那一边是数不清的彼岸花，红色的花瓣如雾一般弥漫着，飘零着。彼岸的深处时常有歌声， 带着忧伤与泪飘荡，这么迷人的仙境，混着孟婆汤的味道。歌，却没有止境。 (本故事及人物纯属虚构，如有雷同，纯属巧合，切勿模仿。)
+						</p>
+						<a href="#" id="recentbook-1">{{recentname1}}</a>
+						<label for="updatetime"></label>3e30
+					</div>
+				</div>
+				<div class="recentlynovel">
+					<img src="img/recently2.jpg">
+					<div class="bookintroduction">
+					<p>愁入云遥，寒禁霜重，红烛泪深人倦。情高转抑，思往难回，凄咽不成清变①。风际断时，迢递天涯，但闻更点。枉教人回首，少年丝竹，玉容歌管。凭作出、百绪凄凉，凄凉惟有，花冷月闲庭院。珠帘绣幕，可有人听？听也可曾肠断？除却塞鸿②，遮莫城乌③，替人惊惯。料南枝明月，应减红香一半。</p>
+						<a href="#" id="recentbook-2">{{recentname2}}</a>
+					</div>
+				</div>
+				<div class="recentlynovel">
+					<img src="img/recently3.jpg">
+					<div class="bookintroduction">
+					<p>她，懵懵懂懂，被人从小宠到大，还在不知不觉中，俘获了几位帅的惊天地泣鬼神的王子的那颗真心，而某人还不知道。
+他，冰冷；他，温柔；他，花心；他，邪魅……究竟，谁才是她命中注定的白马王子呢？</p>
+						<a href="#" id="recentbook-3">{{recentname3}}</a>
+					</div>
+				</div>
+				<div class="recentlynovel">
+					<img src="img/recently4.jpg">
+					<div class="bookintroduction">
+					<p>一道赐婚圣旨,一句戏谑之言,一场场斗智较量,她与他,相识,相知,相惜,却只能阴差阳错,擦肩而过。 一次舍命相救,一场无奈替嫁,一次次针锋相对,她与他,相见,相厌,相恨,却如同刺猬取暖,互相伤害。 一对青梅竹马,一段师徒情缘,一次次阴谋算计,她与他,相知,相恋,相忘,只奈何情深缘浅。 一道红痕盖过倾世容颜,一袭男装掩盖绝代风华,本以为这样便可以摆脱宿命,谁知却弄巧成拙,错上加错。</p>
+						<a href="#" id="recentbook-4">{{recentname4}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+<script>
+  db()
+novelname()
+</script>
+</html>

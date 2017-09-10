@@ -1,0 +1,58 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+	</head>
+	<body>
+		<form action="" method="post">
+	 	<label for="login">登录名</label>
+	 	<input type="text" name="loginname" id="loginname" value="" />
+	 	<label for="password">密码</label>
+	 	<input type="text" name="password" id="password"/>
+	 	<button type="submit">登录</button>
+	 	</form>
+	</body>
+</html>-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>登录界面</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script>
+			function check() {
+				if(document.dlForm.UserN.value == "") {
+					alert("用户名不能为空！");
+					document.dlForm.UserN.focus();
+					return false;
+				}
+				if(document.dlForm.UserP.value == "") {
+					alert("密码不能为空！");
+					document.dlForm.UserP.focus();
+					return false;
+				}
+				document.dlForm.submit();
+				return true;
+			}
+		</script>
+	</head>
+
+	<body>
+		<!--<div id="background">
+			<img src="./img/timg2.png"/>
+		</div>-->
+		<div id="welcome">
+			<p>欢迎进入登录界面！</p>
+			<form action="dlhou.jsp" onsubmit="return check()" method="post" name="dlForm">
+				<input type="text" name="UserN" style="width:148px;" placeholder="用户名"/>
+				<input type="password" name="UserP" style="width:148px;" placeholder="密码"/>
+				<input type="submit" value="登录"  />
+			    <input type="button" value="忘记密码" onclick="parent.location.href('welcom.jsp')" />
+		
+			</form>
+		</div>
+	</body>
+
+</html>

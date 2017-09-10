@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+    background: url(../img/timg2.png) no-repeat scroll top left;
+    background-position: 40% 0px;
+}
+@keyframes myfirst
+{
+    0%   {margin-top: -50px;}
+    25%  {margin-top: -20px;}
+    50%  {margin-top: 0px;}
+    75%  {margin-top: 80px;}
+    100% {margin-top: 160px;}
+}
+p{
+    font-style: italic;
+    font-size: larger;
+    color: #CADCC3;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+#welcome{
+    animation: myfirst 3s;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-left: 25%;
+    z-index: -1;
+    /*margin-left: 15px;*/
+}
+input {
+	display: block;
+	padding-bottom: 10px;
+    padding-left: 10px;
+    margin:0 auto;
+    margin-top: 2px;
+}
