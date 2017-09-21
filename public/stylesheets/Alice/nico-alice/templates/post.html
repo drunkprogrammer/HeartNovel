@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{%- block title -%}{{config.package.family}}/{{config.package.name}} - {{post.title}}{%- endblock -%}
+
+{% block content %}
+<article class="hentry">
+  <h1 class="entry-title">{{post.title}}</h1>
+  <div class="entry-content">
+    {{ post.html|replace_code }}
+  </div>
+</article>
+{% endblock %}
+
+{%- block subsidebar %}
+<ul id="module-output">
+  <li class="module-multiable" title="本组件共有{{config.package.spm.output|length}}个子模块">文件</li>
+    {%- for value in config.package.spm.output %}
+    <li><a data-file="{{value}}" href="dist/{{value}}">■</a></li>
+    {%- endfor %}
+</ul>
+<div id="output-card">
+    <h3>{{config.package.family}}/{{config.package.name}}/{{config.package.version}}/<a target="_blank" id="output-file"></a></h3>
+    <p>这是模块的输出文件，请 require 或 link 来加载此文件。</p>
+</div>
+{%- endblock %}
+
+{%- block foot %}
+{%- endblock %}
+

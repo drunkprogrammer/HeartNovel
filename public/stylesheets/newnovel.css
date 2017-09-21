@@ -1,0 +1,59 @@
+body{
+	padding: 0 auto;
+	margin: 0 auto;
+}
+#novel{
+	margin: 0px 15%;
+}
+#novel-1{
+   /*background-image: url(../img/timg.jpg) 20% 100%;*/
+	background-color: white;
+}
+#novel-2{
+/*	background: -webkit-linear-gradient(white,#6AD176);*/
+   background:-webkit-linear-gradient(white,pink);
+
+}
+#novel-3{
+	   float: right;
+	   margin: -40px 20%;
+}
+h1{
+	padding: 0px 30px;
+	color: pink;
+}
+h2{
+	padding:0px 120px;
+	font:italic bold 20px arial sans-serif;
+	display: normal;
+	color: lightblue;
+}
+img{
+	height: 20%;
+	width: 20%;
+}
+a{
+	text-decoration: none;
+    color:deeppink;
+    display: inline;
+}
+li{
+	list-style:none;
+	display: inline;
+	padding-left: 15px;
+	font-size: 18px;
+	font-family: "arial black";
+}
+content{
+	width: 100%;
+}
+.bookintroduction{
+	    padding:0px 20%;
+		float: right;
+		margin:-28% 12%;
+		
+}
+p{
+	color: salmon;
+	font-size: 18px
+}

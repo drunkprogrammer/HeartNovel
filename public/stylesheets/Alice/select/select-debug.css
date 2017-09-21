@@ -1,0 +1,60 @@
+/*! define alice/select/1.0.0/select-debug.css */
+/* alice.select 样式模块 */
+.ui-select {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.ui-select a {
+  color: #7d7d7d;
+  font-size: 12px;
+  text-decoration: none;
+}
+.ui-select a:hover {
+  text-decoration: none;
+}
+a.ui-select-trigger {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 98%;
+  border: 1px solid #ccc;
+  height: 30px;
+  line-height: 30px;
+  text-indent: 10px;
+  background: -webkit-linear-gradient(top, #fbfbfb, #f3f3f3);
+  background: -moz-linear-gradient(top, #fbfbfb, #f3f3f3);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#fbfbfb, endColorstr=#f3f3f3);
+}
+a.ui-select-trigger i {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  line-height: 28px;
+  text-indent: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+a.ui-select-trigger:hover {
+  border: 1px solid #999;
+}
+.ui-select-content {
+  width: 98%;
+  margin: -1px 0 0;
+  padding: 0;
+  background: #fff;
+  list-style: none;
+  border: 1px solid #ccc;
+}
+.ui-select-item a {
+  display: block;
+  padding: 7px 0;
+  text-indent: 10px;
+}
+.ui-select-item a:hover {
+  background: #f2f2f2;
+}
+.ui-select-item-hover a {
+  background: #f2f2f2;
+}

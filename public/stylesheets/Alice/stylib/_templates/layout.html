@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="{{theme.lang}}">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{post.title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="{{system.name}} {{system.version}}" />
+        {%- block assets %}
+        <link type="image/x-icon" href="{{static_url('css/favicon.ico')}}" rel="icon">
+        <link rel="stylesheet" href="{{static_url('css/normalize.css')}}" />
+        <link rel="stylesheet" href="{{static_url('css/site.css')}}" />
+        <link rel="stylesheet" href="{{static_url('css/solarized.css')}}" />
+        <link rel="stylesheet" href="{{static_url('style.css')}}" />
+        {%- include "snippet/head.html" %}
+        <script src="{{static_url('js/site.js')}}"></script>
+        <!--[if lt IE 9]>
+        <script src="{{static_url('js/html5shiv.js')}}"></script>
+        <![endif]-->
+        {%- endblock %}
+        {%- block afterstyle %}{% endblock %}
+    </head>
+    <body>
+        <div class="nav-area">
+            <ul class="content-wrapper">
+                <li class="title"><a href="">{{post.title}}</a></li>
+                <li class="nav-loading"><img width="160" alt="加载中..." src="static/loading.gif"></li>
+            </ul>
+        </div>
+        <div class="main-area content-wrapper">
+            <script type="text/template" id="list-template">
+                <li><a href="#"><i class="iconfont">模块</i></a></li>
+            </script>
+            <div class="content-area">
+                <div class="content">{{post.html}}</div>
+            </div>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,125 @@
+/*! define alice/tipbox/1.1.0/tipbox-debug.css */
+/* alice.tipbox 样式模块 */
+
+.ui-tipbox {
+    position: relative;
+    zoom: 1;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.ui-tipbox .ui-tipbox-icon {
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 22px;
+    left: 48px;
+}
+
+.ui-tipbox-icon .iconfont {
+    font-size: 36px;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 32px;
+    height: 32px;
+    line-height: 36px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.ui-tipbox-message {
+    border: 1px solid #b2e2ea;
+    background: #e5f2f8;
+}
+
+.ui-tipbox-message .ui-tipbox-icon .iconfont {
+    color: #68b5e2;
+}
+
+.ui-tipbox-success {
+    border: 1px solid #E1E1CA;
+    background: #edfed0;
+}
+
+.ui-tipbox-success .ui-tipbox-icon .iconfont {
+    color: #b5de70;
+}
+
+.ui-tipbox-error {
+    background: #FDEEE9;
+    border: 1px solid #fadcd3;
+}
+
+.ui-tipbox-error .ui-tipbox-icon .iconfont {
+    color: #f17975;
+}
+
+.ui-tipbox-warning {
+    background: #fefea4;
+    border: 1px solid #e6e098;
+}
+
+.ui-tipbox-warning .ui-tipbox-icon .iconfont {
+    color: #ff9966;
+}
+
+.ui-tipbox-question {
+    border: 1px solid #b2e2ea;
+    background: #e0f4ff;
+}
+
+.ui-tipbox-question .ui-tipbox-icon .iconfont {
+    color: #66cae2;
+}
+
+.ui-tipbox-stop {
+    background: #FDEEE9;
+    border: 1px solid #fadcd3;
+}
+
+.ui-tipbox-stop .ui-tipbox-icon .iconfont {
+    color: #f17975;
+}
+
+.ui-tipbox-wait {
+    border: 1px solid #fae3cc;
+    background: #FFF9D9;
+}
+
+.ui-tipbox-wait .ui-tipbox-icon .iconfont {
+    color: #d1a066;
+}
+
+.ui-tipbox-content {
+    margin: 14px 0 14px 87px;
+}
+
+.ui-tipbox-content .ui-tipbox-title {
+    margin: 0;
+    padding: 0;
+}
+
+.ui-tipbox-content h3.ui-tipbox-title,
+.ui-tipbox-content-simple h3.ui-tipbox-title {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ui-tipbox-content-simple {
+    margin: 22px 0 22px 88px;
+}
+
+.ui-tipbox-explain {
+    margin: 0;
+    padding: 0;
+    color: #808080;
+}
+
+.ui-tipbox-white  {
+    background: #fff;
+    border: 1px solid transparent;
+    _border-color:tomato;   /* fix ie6 dont support border transparent */
+    _filter:chroma(color=tomato);
+}

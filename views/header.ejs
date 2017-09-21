@@ -1,0 +1,25 @@
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">         
+      <a class="navbar-brand" href="/"></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+
+        <% if (locals.username) { %> 
+          <li>
+            <a href="#">        
+                <%= username %>          
+            </a>
+          </li>
+          <li>
+            <a href="/userlist">        
+                用户列表        
+            </a>
+          </li>
+          <li><a href="/logout">安全退出</a></li> 
+        <% } %>           
+      </ul>
+    </div>              
+  </div>
+</div>

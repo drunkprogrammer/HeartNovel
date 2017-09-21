@@ -1,0 +1,100 @@
+body {
+	padding: 0 auto;
+	margin: 0 auto;
+}
+
+#novel {
+	margin: 0px 15%;
+}
+
+#novel-1 {
+	/*background-image: url(../img/timg.jpg) 20% 100%;*/
+	background-color: white;
+}
+
+#novel-2 {
+	/*	background: -webkit-linear-gradient(white,#6AD176);*/
+	background: -webkit-linear-gradient(white, pink);
+}
+
+#novel-3 {
+	float: right;
+	margin: -40px 20%;
+}
+
+h1 {
+	padding: 0px 30px;
+	color: pink;
+}
+
+h2 {
+	padding: 0px 120px;
+	font: italic bold 20px arial sans-serif;
+	display: normal;
+	color: lightblue;
+}
+
+a {
+	text-decoration: none;
+	color: deeppink;
+	display: inline;
+}
+
+li {
+	list-style: none;
+	display: inline;
+	padding-left: 15px;
+	font-size: 18px;
+	font-family: "arial black";
+}
+
+#content {
+	border: dashed cadetblue;
+	margin: 50px 40%;
+	height:auto;
+}
+#content a{
+	display: block;
+}
+img {
+	height: 20%;
+	width: 30%;
+}
+
+.ds-post-main {
+	position: relative;
+	width: 500px;
+	padding-left: 35%;
+}
+/*球外部*/
+.ds-avatar {
+	position: absolute;
+	top: 20px;
+	width: 31px;
+	height: 31px;
+	padding: 5px;
+	background: #ADADAD;
+	border-radius: 50%;
+}
+
+.ds-avatar a {
+	display: block;
+	width: 31px;
+	height: 31px;
+	background:lightgreen;
+	border-radius: 50%;
+}
+
+.ds-comment-body {
+	margin-left: 20px;
+	padding: 10px 10px 10px 30px;
+	height: 80px;
+	background: lightgoldenrodyellow;
+}
+h3{
+	padding-left: 32%;
+}
+#content-1{
+	display: inline-block;
+	padding: 10px;
+}

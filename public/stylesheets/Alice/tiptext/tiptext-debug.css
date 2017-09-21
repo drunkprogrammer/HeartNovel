@@ -1,0 +1,175 @@
+/*! define alice/tiptext/1.0.2/tiptext-debug.css */
+/* alice.tiptext 样式模块 */
+
+.ui-tiptext {
+    margin: 0;
+    color: #4D4D4D;
+    position:relative;
+    font-size: 12px;
+    zoom:1;
+}
+
+.ui-tiptext-follow {
+    padding-left: 21px;
+}
+
+.ui-tiptext-container {
+    padding: 8px 12px;
+    position:relative;
+    zoom:1;
+}
+.ui-tiptext .iconfont {
+    font-size: 1.33em;
+    line-height: 1em;
+    text-shadow: 0 1px 0 #fff;
+    position: relative;
+    top: 2px;
+    margin-right: 2px;
+}
+.ui-tiptext-icon {
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+.ui-tiptext-message .ui-tiptext-icon {
+    color: #68b5e2;
+}
+.ui-tiptext-container-message {
+    border: 1px solid #b2e2ea;
+    background: #e5f2f8;
+}
+.ui-tiptext-success .ui-tiptext-icon {
+    color: #b5de70;
+}
+.ui-tiptext-container-success {
+    background: #E7FFCE;
+    border: 1px solid #B9E2A0;
+}
+.ui-tiptext-error .ui-tiptext-icon {
+    color: #f17975;
+}
+.ui-tiptext-container-error {
+    background: #FDEEE9;
+    border: 1px solid #fadcd3;
+}
+.ui-tiptext-warning .ui-tiptext-icon {
+    color: #ff9966;    
+}
+.ui-tiptext-container-warning {
+    background: #fefea4;
+    border: 1px solid #e6e098;
+}
+.ui-tiptext-question .ui-tiptext-icon {
+    color: #66cae2;    
+}
+.ui-tiptext-container-question {
+    border: 1px solid #b2e2ea;
+    background: #e0f4ff;
+}
+.ui-tiptext-stop .ui-tiptext-icon {
+    color: #f17975;
+}
+.ui-tiptext-container-stop {
+    background: #FDEEE9;
+    border: 1px solid #fadcd3;
+}
+.ui-tiptext-wait .ui-tiptext-icon {
+    color: #d1a066;
+}
+.ui-tiptext-container-wait{
+    border: 1px solid #fae3cc;
+    background: #FFF9D9;
+}
+
+/* arrow */
+.ui-tiptext-arrowup, .ui-tiptext-arrowup em, .ui-tiptext-arrowup span,
+.ui-tiptext-arrowleft, .ui-tiptext-arrowleft em, .ui-tiptext-arrowleft span,
+.ui-tiptext-arrowdown, .ui-tiptext-arrowdown em, .ui-tiptext-arrowdown span {
+    position: absolute;
+    font-size: 14px;  
+    font-family: "SimSun";
+    font-style: normal;
+    line-height: 1;
+}
+
+.ui-tiptext-arrowup, .ui-tiptext-arrowleft, .ui-tiptext-arrowdown {
+    height: 10px;
+    width: 16px;
+}
+
+.ui-tiptext-arrowup {
+    left: 32px;
+    top:-7px;
+}
+.ui-tiptext-arrowup em {
+    top: -1px;
+}
+
+.ui-tiptext-arrowleft {
+    left: -6px;
+    top:10px;
+}
+.ui-tiptext-arrowleft em {
+    left:-1px;
+}
+
+.ui-tiptext-arrowdown {
+    left: 32px;
+    bottom: -3px;
+}
+
+.ui-tiptext-arrowdown em {
+    top: 1px;
+}
+
+/* arrow color*/
+.ui-tiptext-container-message .ui-tiptext-arrow em {
+    color:#b2e2ea;
+}
+.ui-tiptext-container-message .ui-tiptext-arrow span {
+    color:#e5f2f8;
+}
+.ui-tiptext-container-success .ui-tiptext-arrow em {
+    color:#E1E1CA;
+}
+.ui-tiptext-container-success .ui-tiptext-arrow span {
+    color:#edfed0;
+}
+.ui-tiptext-container-error .ui-tiptext-arrow em {
+    color:#fadcd3;
+}
+.ui-tiptext-container-error .ui-tiptext-arrow span {
+    color:#FDEEE9;
+}
+.ui-tiptext-container-warning .ui-tiptext-arrow em {
+    color:#e6e098;
+}
+.ui-tiptext-container-warning .ui-tiptext-arrow span {
+    color:#fefea4;
+}
+.ui-tiptext-container-question .ui-tiptext-arrow em {
+    color:#b2e2ea;
+}
+.ui-tiptext-container-question .ui-tiptext-arrow span {
+    color:#e0f4ff;
+}
+.ui-tiptext-container-stop .ui-tiptext-arrow em {
+    color:#fadcd3;
+}
+.ui-tiptext-container-stop .ui-tiptext-arrow span {
+    color:#FDEEE9;
+}
+.ui-tiptext-container-wait .ui-tiptext-arrow em {
+    color:#fae3cc;
+}
+.ui-tiptext-container-wait .ui-tiptext-arrow span {
+    color:#FFF9D9;
+}
+
+.ui-tiptext-close {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: #60A2C5;
+    cursor: pointer;
+}

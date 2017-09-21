@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>单本小说 </title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/onebook.css" />
+		<script src="javascripts/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			function check() {
+	             $.ajax({
+		//	     url:'http://192.168.1.102:8888/',
+		        url: chapter2.zhuishushenqi.com/chapter/章节link(从章节列表中获得)?k=2124b73d7e2e1945&t=1468223717,
+		
+		        data: data,
+		//type:POST,
+		        type: 'GET',
+		        success: function(data) {
+		     	console.log(data);
+		}
+	})</script>
+	</head>
+
+	<body>
+		<div id="novel">
+			<div id="novel-1">
+				<h1>初心在线小说</h1>
+				<h2>一个没有广告的小说网站</h2>
+			</div>
+			<div id="novel-2">
+				<ul class="header" id="header">
+					<li id="first">
+						<a href="#">最新小说</a>
+					</li>
+					<li>
+						<a href="#">小说排名</a>
+					</li>
+					<li>
+						<a href="#">我的书架</a>
+					</li>
+					<li>
+						<a href="#">资源分享</a>
+					</li>
+					<li>
+						<a href="#">写写小说</a>
+					</li>
+				</ul>
+				<div id="novel-3">
+					<form action="#" method="post">
+						<input name="bookname" id="search" placeholder="书名">
+						<!--这个地方可以输入文字的时候提示用户有什么书-->
+						<input type="submit" value="搜索" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="content">
+			<img src="stylesheets/webcont/images/common/recently1.jpg" />
+			<div id="content-1">
+			<a href="beginread.html" class="onebook" onactivate="check()">开始阅读</a>
+			<a href="chaptersearch.html" class="onebook">章节查询</a>
+			</div>
+		</div>
+		<h3>评论区</h3>
+		<div class="ds-post-main">
+			<div class="ds-avatar">
+				<a href="#nogo"> </a>
+			</div>
+			<div class="ds-comment-body">赞(/≧▽≦/)</div>
+		</div>
+		<br>
+		<div class="ds-post-main">
+			<div class="ds-avatar">
+				<a href="#nogo"> </a>
+			</div>
+			<div class="ds-comment-body">棒棒哒 </div>
+		</div>
+		<br>
+		<div class="ds-post-main">
+			<div class="ds-avatar">
+				<a href="#nogo"> </a>
+			</div>
+			<div class="ds-comment-body">好看 </div>
+		</div>
+		<br>
+		<div class="ds-post-main">
+			<div class="ds-avatar">
+				<a href="#nogo"> </a>
+			</div>
+			<div class="ds-comment-body"> 喜欢</div>
+		</div>
+	</body>
+
+</html>
