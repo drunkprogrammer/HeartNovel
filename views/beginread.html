@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>开始阅读</title>
+		<script src="javascripts/vue.js"></script>
+		<script src="javascripts/jquery-1.11.0.min.js"></script>
 		<style type="text/css">
-			body{
+			body {
 				background: pink;
 			}
 		</style>
 	</head>
+
 	<body>
-		<h1>开始阅读</h1>
+		<div id="content">
+			
+		</div>
+		<div id="link">
+			<span><a href="http://localhost:8000/beginread">上一章</a></span>
+			<span><a href="http://localhost:8000/beginread">下一章</a></span>
+		</div>
+
 	</body>
+    <script>
+	      var essay=new Vue({
+	      	el:'#content',
+	      	data:{
+	      		essayContent:' '
+	      	}
+	      })
+//	      window.onload=function getEssay(){
+//	      	     data=$.ajax({
+//		//	     url:'http://192.168.1.102:8888/',
+//		        url: 'http://api.zhuishushenqi.com/toc/577b477dbd86a4bd3f8bf1b2?view=chapters',
+//		
+//		//type:POST,
+//		        type: 'GET',
+//		        success: function(data) {
+//		     	console.log(data.responseText);
+//	            }
+//		        })}
+          function addScriptTag(src){
+          	var script=document.createElement('script');
+          	script.setAttribute("type","text/javascript");
+          	script.src=src;
+          	document.body.appendChild('script');
+          }
+          window.onload=function(){
+          	addScriptTag("http://api.zhuishushenqi.com/toc/577b477dbd86a4bd3f8bf1b2?view=chapters");
+          }
+          function chapters(data){
+          	console.log(data);
+          }
+	</script>
 </html>
