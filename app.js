@@ -18,6 +18,7 @@ var upload = require('./routes/upload');
 var newnovel=require('./routes/newnovel');
 var onebook=require('./routes/onebook');
 var beginread=require('./routes/beginread');
+var bookshelf=require('./routes/bookshelf');
 var app = express();
 
 // view engine setup
@@ -64,6 +65,7 @@ app.use('/upload', upload);
 app.use('/newnovel',newnovel);
 app.use('/onebook',onebook);
 app.use('/beginread',beginread);
+app.use('/bookshelf',bookshelf);
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
