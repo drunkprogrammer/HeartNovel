@@ -30,4 +30,7 @@ router.get('/onebook', function(req, res) {
 router.get('/beginread', function(req, res) {
 	 res.render( "beginread" );
 });
+router.get('/bookshelf', function(req, res) {
+	 res.render( "bookshelf" );
+});
 module.exports = router;

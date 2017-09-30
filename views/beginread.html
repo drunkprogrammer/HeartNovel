@@ -1,15 +1,117 @@
 <!DOCTYPE html>
 <html>
+	<!--?k=2124b73d7e2e1945&t=1468223717-->
+
 	<head>
 		<meta charset="UTF-8">
 		<title>开始阅读</title>
+		<script src="javascripts/vue.js"></script>
+		<script src="javascripts/jquery-1.11.0.min.js"></script>
 		<style type="text/css">
-			body{
-				background: pink;
+			body {
+				background: blanchedalmond;
 			}
 		</style>
 	</head>
+
 	<body>
-		<h1>开始阅读</h1>
+		<header>开始阅读</header>
+		<div id="content">
+              
+		</div>
+		<div id="link">
+			<span><a href="http://localhost:8000/beginread">上一章</a></span>
+			<span><a href="http://localhost:8000/beginread">下一章</a></span>
+		</div>
+        <script>
+        	$.ajax({
+        		type:"get",
+        		url:"/api/toc/577b477dbd86a4bd3f8bf1b2?view=chapters",
+        		success:function(data){
+        			console.log(data);
+//                  var json=(eval('('+data+')')).chapters;
+                    var json=data.chapters;
+                    console.log(json);
+                    for(var i=0;i<json.length;i++){
+                    	var titlep=json[i].title;
+                    	console.log(titlep);
+                    	$("#content").append(titlep+"<br />")
+                    }
+                    
+                   
+        		},
+        		error:function(data){
+        			console.log("Error");
+        		}
+        		
+        	});
+//		var essay = new Vue({
+//			el: '#content',
+//			data: {
+//				essayContent: '微风吹过，远处的天空，夕阳的一缕红霞，似乎将苍穹分开成为了两部分，余晖中，整个大地成为了橘黄色，将那一片又一片的麦穗，映照成为了橘色的海浪。 很美。If you want, I am willing.If you want, I am willing.地之所载，六合之间，四海之内，有仙洲曰云荒。照之以日月，经之以星辰，纪之以四时，要之以太岁，神灵所生，其物异形，或天或寿，唯圣人能通其道。'
+//+'他们将在蓝天碧海之下幸福地生活，远离一切战争混乱，住在珊瑚的宫殿里，子孙绕膝，直到死亡将他们分开。'
+//+'再回首已是百年身。'
+//+'九嶷漫起冥灵的雾气 苍龙拉动白玉的战车 神鸟的双翅披着霞光 从天飞舞而降的高冠长铗的帝君将云荒大地从晨曦中唤醒 六合间响起了六个声音：暗夜的羽翼 赤色的飞鸟 紫色的光芒照耀之下 青之原野和蓝之湖水 站在白塔顶端的帝君 将六合之王的呼应一一聆听——天佑空桑，国祚绵长！'
+//+'时间以百年计地流淌过去，有些东西终将沉淀下去，成为过去。'
+//+'君生我未生，我生君已老。隔了百年的光阴，万里的迢梯,浮世肮脏，人心险诈，割裂了生和死。到哪里再去寻找那一袭纯白如羽的华衣和那张如莲花般的素颜？'
+//+'梦想与荣耀同在。'
+//+'夏之日,冬之夜,百岁之后,归于其居.冬之夜,夏之日.百岁之后,归于其室'
+//+'我只是一个人，天地都背弃。'
+//+'那些人，那些事，那些孤寂而平淡的日子，一旦过去，便是再也、再也无法回来了。'
+//+'原来,即便是生命里最深切的感情,也终究抵不过时间。'
+//+'六合之间，什么能比伽蓝白塔更高？唯有苍天。六合之间，何处可以俯视白塔顶上的神殿？唯有云浮。'
+//+'一切开始于结束之后，生与死重叠，终点与起点重叠．一切终归湮灭，如镜像倒影．．．'
+//+'没有一颗心朝向你，没有一个人会想起你，天地之大，也无你的立锥之地'
+////自己喜欢的东西，如果守不住，是不是还不如别去在意它呢？但是，如果已经在意了的事情，我就一定要守住它！
+////人生是一场负重的狂奔，需要不停地在每一个岔路口做出选择。而每一个选择，都将通往另一条截然不同的命运之路。
+////命运……如果真的有人类所谓命运的话，那么命运的转轮从开始转动此后，所有人就都在命运的流程里生、离、死、别，随着命运之轮的转动永不能再停歇！
+////有些东西只存在于特定的时间内，过了那段时间就没有它存在的意义了……在记忆中美好的东西，就让它只存在于记忆中吧。
+////这世间的种种爱恨情仇来了又去 犹如潮汐 可是 所爱的人啊 只要我曾真的爱过你 那我就永远不会忘记 但请你原谅 我还是要不动声色地继续走下去。
+////如果时间可以倒流，她将对她深爱的神诋说：我的生命不过一瞬，那么，我就只爱你那一瞬．
+////就让我们一起守望这片云荒大地，直到最后一颗星辰陨落。
+////如果所有星辰都坠落了，那么还剩下什么？
+////你和我
+////天地如此辽远，时空如此寂寞，我又怎会再留下你一个人？
+////要么让我死亡，要么让我燃烧，却决不要让我在永无止境的岁月里，慢慢腐烂消弭下去！！！
+////即使是最近的两颗星辰,他们之间也隔着毕生也无法到达的距离...
+////如果百年前的一跃还不能说明，如果百年后的星魂血誓还不能说明——那么言语又有何意义？他侧过头，冷冷地微笑：“我们不是一路人，但毕竟相逢过。”
+////天地之间诸神寂灭，人治的时代已经到来。'
+//　　
+//　　    
+//			}
+//		})
+		//	      window.onload=function getEssay(){
+		//	      	     data=$.ajax({
+		//		//	     url:'http://192.168.1.102:8888/',
+		//		        url: 'http://api.zhuishushenqi.com/toc/577b477dbd86a4bd3f8bf1b2?view=chapters',
+		//		
+		//		//type:POST,
+		//		        type: 'GET',
+		//		        success: function(data) {
+		//		     	console.log(data.responseText);
+		//	            }
+		//		        })}
+//		function addScriptTag(src) {
+//			var script = document.createElement('script');
+//			script.setAttribute("type", "text/javascript");
+//			script.src = src;
+//			document.body.appendChild(script);
+//		}
+//	
+//		window.onload = function() {
+//			  addScriptTag("http://api.zhuishushenqi.com/toc/577b477dbd86a4bd3f8bf1b2?view=chapters");
+//		}
+//
+//		function chapters(data) {
+//			var parsej = $.parseJSON(data);
+//			for(var i = 0; i < parsej.chapters.length; i++) {
+//			   $('#content').append(parsej.chapters[i].title + '<br/>');
+//		    }
+//			essay.essayContent=parsej;
+//			console.log(data);
+//		}
+	</script>
 	</body>
+	
+
 </html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的书架</title>
+		<style>
+			body {
+				padding: 0 auto;
+				margin: 0 auto;
+			}
+			
+			#novel {
+				margin: 0px 15%;
+			}
+			
+			#novel-1 {
+				/*background-image: url(../img/timg.jpg) 20% 100%;*/
+				background-color: white;
+			}
+			
+			#novel-2 {
+				/*	background: -webkit-linear-gradient(white,#6AD176);*/
+				background: -webkit-linear-gradient(white, pink);
+			}
+			
+			#novel-3 {
+				float: right;
+				margin: -40px 20%;
+			}
+			
+			h1 {
+				padding: 0px 30px;
+				color: pink;
+			}
+			
+			h2 {
+				padding: 0px 120px;
+				font: italic bold 20px arial sans-serif;
+				display: normal;
+				color: lightblue;
+			}
+			
+			img {
+				height: 20%;
+				width: 20%;
+			}
+			
+			a {
+				text-decoration: none;
+				color: deeppink;
+				display: inline;
+			}
+			
+			li {
+				list-style: none;
+				display: inline;
+				padding-left: 15px;
+				font-size: 18px;
+				font-family: "arial black";
+			}
+			
+			content {
+				width: 100%;
+			}
+			
+			.bookintroduction {
+				padding: 0px 20%;
+				float: right;
+				margin: -28% 12%;
+			}
+			
+			p {
+				color: salmon;
+				font-size: 18px
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			.stage {
+				position: relative;
+				/*margin:100px;*/
+				margin: 0px 15%;
+			}
+			
+			.desk {
+				background: #eae1dc;
+				width: 500px;
+				height: 20px;
+				position: absolute;
+				bottom: -35px;
+				border-bottom: 2px solid #f5ebe9;
+				z-index: -1;
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			
+			.desk:after {
+				content: "";
+				background: #F2EDEA;
+				width: 574px;
+				position: absolute;
+				height: 65px;
+				-webkit-transform: perspective(300px) rotateX(50deg) translateX(-42px) translateY(-90px);
+				transform: perspective(300px) rotateX(50deg) translateX(-42px) translateY(-90px);
+			}
+			
+			.desk-shadow {
+				position: absolute;
+				bottom: -100px;
+				z-index: -2;
+				background: none;
+				width: 510px;
+				height: 65px;
+				box-shadow: 0 56px 63px rgba(0, 0, 0, 0.3);
+				-webkit-transform: perspective(300px) rotateX(33deg) translateX(3px) translateY(-90px);
+				transform: perspective(300px) rotateX(33deg) translateX(3px) translateY(-90px);
+			}
+			
+			.books-list li {
+				position: relative;
+				display: inline-block;
+				margin-left: 12px;
+				width: 130px;
+				height: 134px;
+				z-index: 2;
+				overflow-y: hidden;
+				overflow-x: visible;
+			}
+			
+			.books-list li img {
+				width: 100px;
+				height: 134px;
+			}
+			
+			.books-list li:after {
+				content: "";
+				position: absolute;
+				overflow: hidden;
+				right: 28px;
+				bottom: 0px;
+				width: 25px;
+				height: 129px;
+				background: rgba(0, 0, 0, 0.4);
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+				-webkit-transform: perspective(300px) rotateX(29deg) rotateY(-61deg) rotateZ(-11deg) translateX(8px) translateY(8px);
+				transform: perspective(300px) rotateX(29deg) rotateY(-61deg) rotateZ(-11deg) translateX(8px) translateY(8px);
+				z-index: -1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="novel">
+			<div id="novel-1">
+				<h1>初心在线小说</h1>
+				<h2>一个没有广告的小说网站</h2>
+			</div>
+			<div id="novel-2">
+				<ul class="header" id="header">
+					<li id="first">
+						<a href="http://localhost:8000/newnovel">最新小说</a>
+					</li>
+					<li>
+						<a href="http://localhost:8000/newnovel">小说排名</a>
+					</li>
+					<li>
+						<a href="http://localhost:8000/bookshelf">我的书架</a>
+					</li>
+					<li>
+						<a href="#">资源分享</a>
+					</li>
+					<li>
+						<a href="#">写写小说</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="stage">
+			<ul class="books-list">
+				<li><img src="http://jjckb.xinhuanet.com/2016-05/20/135374404_14637120163591n.jpg"></li>
+				<li><img src="http://jjckb.xinhuanet.com/2016-05/20/135374404_14637120163591n.jpg"></li>
+				<li><img src="http://jjckb.xinhuanet.com/2016-05/20/135374404_14637120163591n.jpg"></li>
+			</ul>
+			<div class="desk"></div>
+			<div class="desk-shadow"></div>
+		</div>
+	</body>
+
+</html>
