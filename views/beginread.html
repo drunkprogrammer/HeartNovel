@@ -11,7 +11,19 @@
 </body>
 <script type="text/javascript">
 	.ajax({
-		url:
-	})
+		type:"get"
+		url:"chapter2/chapter/章节link(从章节列表中获得)?k=2124b73d7e2e1945&t=1468223717",
+        success:function(data){
+        	var json=JSON.parse(data);
+        	var content=json.chapter;
+        	console.log(content);
+        	for (var i = content.length - 1; i >= 0; i--) {
+        		('#link').append('<p>'content[i].body+'</p>')
+        	}
+        }
+        error:function(data){
+        	console.log('fail to get novel information')
+        }
+	});
 </script>
 </html>
