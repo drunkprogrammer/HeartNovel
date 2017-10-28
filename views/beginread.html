@@ -2,25 +2,33 @@
 <html>
 <head>
 	<title>开始阅读</title>
+        <script src="javascripts/jquery-1.11.0.min.js"></script>
 </head>
 <body>
 <div id="link">
+	
+</div>
+<div id="link2">
 	<span><a href="http://localhost:8000/beginread">上一章</a></span>
 	<span><a href="http://localhost:8000/beginread">下一章</a></span>
 </div>
 </body>
 <script type="text/javascript">
-	.ajax({
-		type:"get"
-		url:"chapter2/chapter/章节link(从章节列表中获得)?k=2124b73d7e2e1945&t=1468223717",
+	$.ajax({
+		type:"get",
+		url:"chapter2/chapter/http%3a%2f%2fbook.my716.com%2fgetBooks.aspx%3fmethod%3dcontent%26bookId%3d1127281%26chapterFile%3dU_1212539_201701211420571844_4093_2.txt?k=2124b73d7e2e1945&t=1468223717"
+		,
+        //ajax里以/开始的路径是绝对路径
         success:function(data){
-        	var json=JSON.parse(data);
-        	var content=json.chapter;
-        	console.log(content);
-        	for (var i = content.length - 1; i >= 0; i--) {
-        		('#link').append('<p>'content[i].body+'</p>')
-        	}
-        }
+            console.log(data);
+          	var jsonc=data.chapter;
+          	console.log(jsonc);
+          	var content=jsonc.body;
+          	console.log(content);
+          	var myJSONString = JSON.stringify(content);
+            var myEscapedJSONString = myJSONString.replace(/\\n/g, "<br />")
+          	$("#link").append('<p>'+myEscapedJSONString+'</p>');
+        },
         error:function(data){
         	console.log('fail to get novel information')
         }

@@ -33,4 +33,7 @@ router.get('/beginread', function(req, res) {
 router.get('/bookshelf', function(req, res) {
 	 res.render( "bookshelf" );
 });
+router.get('/searchapter',function(req,res){
+  res.render("searchapter");
+})
 module.exports = router;

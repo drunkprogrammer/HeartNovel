@@ -19,6 +19,7 @@ var newnovel=require('./routes/newnovel');
 var onebook=require('./routes/onebook');
 var beginread=require('./routes/beginread');
 var bookshelf=require('./routes/bookshelf');
+var searchapter=require('./routes/searchapter');
 var app = express();
 
 // view engine setup
@@ -38,7 +39,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use(express.static('public/stylesheets/webcont/common'));
+app.use(express.static('public/stylesheets/webcont/common'));
 //这里传入了一个密钥加session id
 app.use(cookieParser('Wilson'));
 //使用靠就这个中间件
@@ -50,9 +51,9 @@ app.use('/api', proxy({
 }
 ));
 
-app.use('/chapter', proxy({
+app.use('/chapter2', proxy({
   target: 'http://chapter2.zhuishushenqi.com/',
-  pathRewrite: {'^/chapter' : '/chapter'},
+  pathRewrite: {'^/chapter2' : '/'},
   changeOrigin: true
 }
 ));
@@ -66,6 +67,7 @@ app.use('/newnovel',newnovel);
 app.use('/onebook',onebook);
 app.use('/beginread',beginread);
 app.use('/bookshelf',bookshelf);
+app.use('/searchapter',searchapter);
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
